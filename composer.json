@@ -1,6 +1,6 @@
 {
     "name": "rnr/laravel-json-requests",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "type": "library",
     "require": {
         "rnr/resolver-provider": "~1.0",

@@ -14,6 +14,12 @@ class DataPreparator
      */
     public function prepare($data)
     {
+        if (is_object($data)) {
+            foreach ((array) $data as $key => $value) {
+                $data->{$key} = $this->prepare($value);
+            }
+        }
+
         if (is_array($data)) {
             foreach ($data as $key => &$value) {
                 $value = $this->prepare($value);
